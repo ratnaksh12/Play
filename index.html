@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Ratnaksh - Independent app developer building useful, privacy-focused mobile applications for Android. Developing productivity and utility apps.">
+    <meta name="keywords" content="Ratnaksh, mobile apps, Android developer, productivity apps, utility apps, India">
+    <meta name="author" content="Ratnaksh">
+    <title>Ratnaksh - Independent App Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9fafb;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        header p {
+            font-size: 1.25em;
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        section:last-of-type {
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 2em;
+            font-weight: 600;
+            margin-bottom: 30px;
+            color: #1f2937;
+        }
+
+        .about-content {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #4b5563;
+            max-width: 800px;
+        }
+
+        .about-content p {
+            margin-bottom: 20px;
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .app-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .app-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .app-card h3 {
+            font-size: 1.3em;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 12px;
+        }
+
+        .app-card p {
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        .contact-box {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            max-width: 600px;
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        .contact-item strong {
+            color: #1f2937;
+            font-weight: 600;
+        }
+
+        .contact-item a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-item a:hover {
+            text-decoration: underline;
+        }
+
+        .privacy-content {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            line-height: 1.8;
+        }
+
+        .privacy-content h3 {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #1f2937;
+            margin: 30px 0 15px 0;
+        }
+
+        .privacy-content h3:first-child {
+            margin-top: 0;
+        }
+
+        .privacy-content p {
+            color: #4b5563;
+            margin-bottom: 15px;
+        }
+
+        .privacy-content ul {
+            margin-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .privacy-content li {
+            color: #4b5563;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #1f2937;
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        footer a {
+            color: #93c5fd;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            header p {
+                font-size: 1.1em;
+            }
+
+            h2 {
+                font-size: 1.6em;
+            }
+
+            section {
+                padding: 40px 0;
+            }
+
+            .apps-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-box,
+            .privacy-content {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header / Hero Section -->
+    <header>
+        <div class="container">
+            <h1>Ratnaksh Tyagi</h1>
+            <p>Independent app developer building useful, privacy-focused mobile applications.</p>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>About</h2>
+            <div class="about-content">
+                <p>
+                    Ratnaksh is an independent software developer specializing in mobile applications and digital tools.
+                    We focus on creating productivity-driven, utility-focused, and user-centric experiences for everyday
+                    users.
+                </p>
+                <p>
+                    Our applications are available on Google Play, designed with simplicity, functionality, and user
+                    privacy at their core.
+                    We believe in building tools that enhance daily life without compromising personal data or user
+                    trust.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Apps / Services Section -->
+    <section id="apps">
+        <div class="container">
+            <h2>Apps & Services</h2>
+            <div class="apps-grid">
+                <div class="app-card">
+                    <h3>Android Mobile Applications</h3>
+                    <p>Native Android applications designed for performance, reliability, and ease of use across diverse
+                        device types.</p>
+                </div>
+                <div class="app-card">
+                    <h3>Utility & Productivity Apps</h3>
+                    <p>Tools and utilities that help users accomplish tasks efficiently, save time, and stay organized.
+                    </p>
+                </div>
+                <div class="app-card">
+                    <h3>Software Tools for Everyday Use</h3>
+                    <p>Practical software solutions addressing common user needs with a focus on simplicity and
+                        accessibility.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <div class="contact-box">
+                <div class="contact-item">
+                    <strong>Email:</strong> <a href="mailto:admin@ratnaksh.in">admin@ratnaksh.in</a>
+                </div>
+                <div class="contact-item">
+                    <strong>Domain:</strong> ratnaksh.in
+                </div>
+                <div class="contact-item">
+                    <strong>Location:</strong> India
+                </div>
+                <p style="margin-top: 30px; color: #6b7280;">
+                    For support, inquiries, or partnership opportunities, please contact us via email.
+                    We aim to respond to all messages within 24-48 hours.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Policy Section -->
+    <section id="privacy">
+        <div class="container">
+            <h2>Privacy Policy</h2>
+            <div class="privacy-content">
+                <p><strong>Effective Date:</strong> February 4, 2026</p>
+
+                <h3>Data Collection and Usage</h3>
+                <p>
+                    Ratnaksh is committed to protecting user privacy. We adhere to the principle of minimal data
+                    collection
+                    and only gather information necessary for the functionality of our applications.
+                </p>
+                <p>Our approach to data handling:</p>
+                <ul>
+                    <li>We do not collect unnecessary personal information</li>
+                    <li>Any data collected is used solely to provide and improve app functionality</li>
+                    <li>We do not sell, rent, or share user data with third parties for marketing purposes</li>
+                    <li>Data storage and processing comply with applicable privacy laws and regulations</li>
+                </ul>
+
+                <h3>App-Specific Privacy</h3>
+                <p>
+                    Each application may have specific data requirements based on its functionality.
+                    App-specific privacy practices are disclosed within each application and comply with Google Play
+                    policies
+                    and Indian data protection regulations.
+                </p>
+
+                <h3>User Rights</h3>
+                <p>Users have the right to:</p>
+                <ul>
+                    <li>Access their personal data</li>
+                    <li>Request correction or deletion of their data</li>
+                    <li>Withdraw consent for data processing where applicable</li>
+                    <li>Contact us with privacy-related concerns</li>
+                </ul>
+
+                <h3>Third-Party Services</h3>
+                <p>
+                    Our applications may integrate with third-party services (such as analytics or advertising
+                    platforms)
+                    that have their own privacy policies. We ensure all third-party integrations comply with industry
+                    standards
+                    and best practices.
+                </p>
+
+                <h3>Security</h3>
+                <p>
+                    We implement appropriate technical and organizational measures to protect user data against
+                    unauthorized access, alteration, disclosure, or destruction.
+                </p>
+
+                <h3>Policy Updates</h3>
+                <p>
+                    This privacy policy may be updated periodically to reflect changes in our practices or legal
+                    requirements.
+                    Users will be notified of significant changes through app updates or website announcements.
+                </p>
+
+                <h3>Contact for Privacy Concerns</h3>
+                <p>
+                    For any privacy-related questions, concerns, or requests, please contact us at:
+                    <a href="mailto:admin@ratnaksh.in">admin@ratnaksh.in</a>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Ratnaksh. All rights reserved.</p>
+            <p>Contact: <a href="mailto:admin@ratnaksh.in">admin@ratnaksh.in</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>
